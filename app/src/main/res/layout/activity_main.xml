@@ -6,13 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999">
+
+        <EditText
+            android:id="@+id/ping1EditText"
+            android:layout_width="57dp"
+            android:layout_height="45dp"
+            android:background="@drawable/et_cust"
+            android:ems="10"
+            android:hint="192"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/ping2EditText"
+            android:layout_width="57dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/et_cust"
+            android:ems="10"
+            android:hint="168"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ping1EditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <EditText
+            android:id="@+id/ping3EditText"
+            android:layout_width="57dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/et_cust"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ping2EditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <EditText
+            android:id="@+id/ping4EditText"
+            android:layout_width="57dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/et_cust"
+            android:ems="10"
+            android:hint="12"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ping3EditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/pingButton"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="PING"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/searchHostButton"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:text="Find Hosts"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pingButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
