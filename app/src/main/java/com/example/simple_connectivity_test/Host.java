@@ -107,6 +107,8 @@ public class Host extends AppCompatActivity {
 
                             if(inetAddress.isReachable(100)){
                                 hosts+=currentIp+"\n";
+                                String finalHosts = hosts;
+                                runOnUiThread(()-> hostTextView.setText(finalHosts));
                             }
 
                         } catch (UnknownHostException e) {
@@ -131,8 +133,7 @@ public class Host extends AppCompatActivity {
                     }
 
 
-                    String finalHosts = hosts;
-                    runOnUiThread(()-> hostTextView.setText(finalHosts));
+
 
                 }
 
