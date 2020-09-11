@@ -6,4 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".Ping">
 
+    <TextView
+        android:id="@+id/pingTextView"
+        android:layout_width="0dp"
+        android:layout_height="569dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/et_cust"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:textSize="30sp"
+        android:scrollbars = "vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goBackButtonP"
+        android:layout_width="186dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:text="Go back"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pingTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

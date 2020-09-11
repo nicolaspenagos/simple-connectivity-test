@@ -7,6 +7,8 @@ package com.example.simple_connectivity_test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +40,31 @@ public class MainActivity extends AppCompatActivity {
         ping4EditText = findViewById(R.id.ping4EditText);
         pingButton = findViewById(R.id.pingButton);
         searchHostButton = findViewById(R.id.searchHostButton);
+
+        pingButton.setOnClickListener(
+
+                (view)->{
+
+                    Intent i = new Intent(this, Ping.class);
+                    startActivity(i);
+
+                    String ip = ping1EditText.getText().toString()+"."+ping2EditText.getText().toString()+"."+ping3EditText.getText().toString()+"."+ping4EditText.getText().toString();
+                    getSharedPreferences("bin", MODE_PRIVATE).edit().putString("ip", ip).apply();;
+
+                }
+
+        );
+
+        searchHostButton.setOnClickListener(
+
+                (view)->{
+
+                    Intent i = new Intent(this, Host.class);
+                    startActivity(i);
+
+                }
+
+        );
 
     }
 }
