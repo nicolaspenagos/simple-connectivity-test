@@ -131,13 +131,7 @@ public class Host extends AppCompatActivity {
                         );
 
                     }
-
-
-
-
                 }
-
         ).start();
-
     }
 }
